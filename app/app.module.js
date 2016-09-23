@@ -16,13 +16,17 @@ var occupants_service_1 = require("./occupants.service");
 var rooms_service_1 = require("./rooms.service");
 var room_summary_service_1 = require('./room.summary.service');
 var ws_connection_service_1 = require('./ws.connection.service');
+var roomDate_pipe_1 = require("./roomDate.pipe");
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule],
-            declarations: [app_component_1.AppComponent],
+            declarations: [
+                app_component_1.AppComponent,
+                roomDate_pipe_1.RoomDatePipe
+            ],
             providers: [
                 agents_service_1.AgentsService,
                 occupants_service_1.OccupantsService,

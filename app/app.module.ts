@@ -7,11 +7,15 @@ import {OccupantsService} from "./occupants.service"
 import {RoomsService} from "./rooms.service"
 import {RoomSummaryService} from './room.summary.service'
 import {WsConnectionService} from './ws.connection.service'
+import {RoomDatePipe} from "./roomDate.pipe"
 
 
 @NgModule({
     imports: [BrowserModule],
-    declarations: [AppComponent],
+    declarations: [
+        AppComponent,
+        RoomDatePipe
+    ],
     providers: [
         AgentsService,
         OccupantsService,
